@@ -1,0 +1,23 @@
+.some-selector button:first-of-type {
+  here: prop;
+}
+.some-selector {
+  button {
+    &:first-of-type {
+      color: red;
+    }
+  }
+  p {
+    &:first-of-type {
+      color: red;
+    }
+  }
+}
+.some-selector {
+  button:first-of-type {
+    color: red;
+  }
+  p:first-of-type {
+    color: red;
+  }
+}

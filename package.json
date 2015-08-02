@@ -1,0 +1,78 @@
+{
+  "name": "cssbrush",
+  "version": "0.0.9",
+  "description": "Alternative cli for csscomb with glob support and that only operates on changed files",
+  "main": "index.js",
+  "scripts": {
+    "beautify": "esbeautifier index.js 'src/**/*.js' 'lib/**/*.js' 'bin/**/*.js' 'specs/**/*.js'",
+    "beautify-check": "esbeautifier -k index.js 'src/**/*.js' 'lib/**/*.js' 'bin/**/*.js' 'specs/**/*.js'",
+    "eslint": "eslinter index.js 'src/**/*.js' 'lib/**/*.js' 'bin/**/*.js' 'specs/**/*.js'",
+    "test": "mocha-runner 'specs/**/*.js'",
+    "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
+    "watch": "npm run cover && watch-spawn -p 'specs/**/*.js' -p 'index.js' -p 'src/**/*.js' npm run cover",
+    "lint": "npm run beautify && npm run eslint && npm test",
+    "check": "npm run beautify-check && npm run eslint && npm test",
+    "changelog": "changelogx -f markdown -o ./changelog.md",
+    "do-changelog": "npm run changelog && git add ./changelog.md && git commit -m 'DOC: Generate changelog' --no-verify",
+    "install-hooks": "prepush install && changelogx install-hook && precommit install",
+    "pre-v": "npm run check",
+    "post-v": "npm run do-changelog && git push --no-verify && git push --tags --no-verify",
+    "bump-major": "npm run pre-v && npm version major -m 'BLD: Release v%s' && npm run post-v",
+    "bump-minor": "npm run pre-v && npm version minor -m 'BLD: Release v%s' && npm run post-v",
+    "bump-patch": "npm run pre-v && npm version patch -m 'BLD: Release v%s' && npm run post-v"
+  },
+  "bin": {
+    "cssbrush": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/royriojas/cssbrush"
+  },
+  "license": "MIT",
+  "author": "Roy Riojas (http://royriojas.com)",
+  "prepush": [
+    "npm run check"
+  ],
+  "precommit": [
+    "npm run check"
+  ],
+  "devDependencies": {
+    "changelogx": "^1.0.16",
+    "es6-promise": "^2.3.0",
+    "eslinter": "^2.1.0",
+    "fs-extra": "^0.22.1",
+    "istanbul": "^0.3.17",
+    "mocha-runner": "^1.0.8",
+    "precommit": "^1.1.0",
+    "prepush": "^3.1.2",
+    "proxyquire": "^1.6.0",
+    "spawnly": "^0.1.0",
+    "watch-spawn": "^1.0.4"
+  },
+  "dependencies": {
+    "clix": "^1.1.5",
+    "csscomb": "^3.1.8",
+    "csscomb-core": "^3.0.0-4",
+    "dispatchy": "^1.0.3",
+    "extend": "^3.0.0",
+    "file-entry-cache": "^1.0.1",
+    "glob-expand": "^0.1.0",
+    "gonzales-pe": "^3.0.0-29",
+    "stringformat": "0.0.5",
+    "write": "^0.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/royriojas/cssbrush/issues"
+  },
+  "homepage": "https://github.com/royriojas/cssbrush",
+  "keywords": [
+    "beautifier",
+    "less",
+    "css",
+    "csscomb",
+    "csscomb cli",
+    "css beautifier",
+    "less beautifier",
+    "prettify"
+  ]
+}
