@@ -40,7 +40,7 @@ describe( 'csscomb', function () {
   } );
 
   after( function () { //eslint-disable-line
-    //fs.removeSync( './tmp' );
+    fs.removeSync( './tmp' );
   } );
 
 } );
