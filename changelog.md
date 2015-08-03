@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.2.2
+- **Bug Fixes**
+  - lock dependencies - [2f74599]( https://github.com/royriojas/cssbrush/commit/2f74599 ), [royriojas](https://github.com/royriojas), 03/08/2015 11:03:39
+
+    
 ## v0.2.1
 - **Build Scripts Changes**
   - Remove test resources created during tests - [97fc3e2]( https://github.com/royriojas/cssbrush/commit/97fc3e2 ), [royriojas](https://github.com/royriojas), 03/08/2015 10:44:22
