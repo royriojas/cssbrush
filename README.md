@@ -4,7 +4,7 @@
 # cssbrush
 Alternative cli for csscomb with glob support and that only operates on changed files
 
-## What's different?
+## What's different compared to `csscomb`?
 - Specify the files to beautify using globs. e.g:
 
   ```bash
@@ -17,6 +17,20 @@ Alternative cli for csscomb with glob support and that only operates on changed 
 
   **The cache is stored inside your node_modules**, add an entry to ignore `.cache` if you commit your code to your VCS
 
+- Two new options added to the `csscomb.json` file:
+
+  ```javascript
+  {
+    // adds a new line before each selector to nicely separate them.
+    // set it to "" if you don't this behavior
+    "space-before-selector": "\n",
+    // how many empty lines you want to keep
+    "max-empty-lines": "\n\n",
+  }
+  ```
+
+##
+
 ## Install
 
 ```bash
@@ -24,6 +38,24 @@ npm i -g cssbrush
 ```
 
 ## Usage
+
+Here is the output of the `--help` option
+
+```bash
+Usage: cssbrush [options] glob [glob1] [glob2]..[globN]
+
+Options:
+  -k, --check-only     Will just run the beautifier and report which files need to be beautified
+  -u, --use-cache      If true, this module will remember the `mtime` and `size` of the beatufied files and only operate on the ones that changed. If false,
+                       the cache will be destroyed. Cache will be used unless `--no-use-cache` is specified  - default: true
+  -h, --help           Show this help
+  -v, --version        Outputs the version number
+  -q, --quiet          Show only the summary info - default: false
+  --colored-output     Use colored output in logs
+  -c, --config String  Path to your `csscomb` config, if not provided will try to use the `.csscomb.json` file in your current working directory, if not
+                       found will use the one provided with this package.
+                       Build your own config here: http://csscomb.com/config
+```
 
 ```bash
 cssbrush 'path/to/files/**/*.less' # or css

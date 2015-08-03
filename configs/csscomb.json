@@ -11,7 +11,7 @@
   "element-case": "lower",
   "eof-newline": true,
   "leading-zero": false,
-  "quotes": "single",
+  "quotes": "double",
   "space-before-colon": "",
   "space-after-colon": " ",
   "space-before-combinator": " ",
@@ -26,6 +26,8 @@
   "tab-size": true,
   "unitless-zero": true,
   "vendor-prefix-align": false,
+  "space-before-selector": "\n",
+  "max-empty-lines": "\n\n",
   "sort-order": [
     [
       "font",
@@ -41,17 +43,14 @@
       "font-emphasize-position",
       "font-emphasize-style",
       "font-smooth",
-      "line-height"
-    ],
-    [
+      "line-height",
       "position",
       "z-index",
       "top",
       "right",
       "bottom",
       "left"
-    ],
-    [
+      ,
       "display",
       "visibility",
       "float",
@@ -63,12 +62,14 @@
       "-ms-overflow-y",
       "clip",
       "zoom",
+      "align-items",
+      "justify-content",
+      "flex",
       "flex-direction",
       "flex-order",
       "flex-pack",
       "flex-align"
-    ],
-    [
+      ,
       "-webkit-box-sizing",
       "-moz-box-sizing",
       "box-sizing",
@@ -88,8 +89,7 @@
       "padding-right",
       "padding-bottom",
       "padding-left"
-    ],
-    [
+      ,
       "table-layout",
       "empty-cells",
       "caption-side",
@@ -99,8 +99,7 @@
       "list-style-position",
       "list-style-type",
       "list-style-image"
-    ],
-    [
+      ,
       "content",
       "quotes",
       "counter-reset",
@@ -227,8 +226,7 @@
       "-moz-hyphens",
       "hyphens",
       "pointer-events"
-    ],
-    [
+      ,
       "opacity",
       "filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",
       "-ms-filter:'progid:DXImageTransform.Microsoft.Alpha",

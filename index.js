@@ -1,26 +1,47 @@
 var dispatcher = require( 'dispatchy' );
 var merge = require( 'extend' );
 var fs = require( 'fs' );
-var Comb = require( 'csscomb-core' );
 
 var beautifier = merge( dispatcher.create(), {
   _init: function ( opts ) {
     var me = this;
     me.opts = opts;
+
     var CSSComb = require( 'csscomb/lib/csscomb' );
     me.comb = new CSSComb();
-    me.cleanerComb = new Comb( [
-      require( './lib/options/line-before-declaration' )
-    ], 'css', 'less', 'scss', 'sass' );
-    me.cleanerComb.configure( {
+
+    var lineBeforeDcl = require( './lib/options/line-before-declaration' )( opts.cfg[ 'space-before-selector' ] );
+
+    me.cleanerComb = new CSSComb();
+
+    me.cleanerComb.use( lineBeforeDcl );
+
+    me.cleanerComb.configure( merge( {
+      // fix for a bug that prevent proper formatting of the code
+      // by making sure all the declarations have a new line before
+      // makes the formatting more consistent, but sadly it makes the
+      // process more expensive
       'line-before-declaration': true
-    } );
+    }, opts.cfg ) );
+
     me.comb.configure( opts.cfg );
   },
   format: function ( source, options ) {
     var me = this;
-    source = me.cleanerComb.processString( source, options );
-    return me.comb.processString( source, options );
+    // add a new line before each declaration
+    // to make formatting more consistent
+    source = me.cleanerComb.processString( source, options ).trim();
+
+    // do the actual beautifying
+    source = me.comb.processString( source, options );
+
+    // check for the maximum empty lines allowed
+    var maxEmptyLines = me.opts.cfg[ 'max-empty-lines' ] || '\n\n';
+    if ( maxEmptyLines ) {
+      source = source.replace( /\n\s*\n/g, maxEmptyLines );
+    }
+
+    return source;
   },
   beautify: function ( files ) {
     var me = this;

@@ -4,7 +4,7 @@ describe( 'csscomb', function () {
 
   var exec = require( '../lib/exec' );
   var read = function ( file ) {
-    require( 'fs' ).readFileSync( file, {
+    return require( 'fs' ).readFileSync( file, {
       encoding: 'utf8'
     } );
   };
@@ -40,7 +40,7 @@ describe( 'csscomb', function () {
   } );
 
   after( function () { //eslint-disable-line
-    fs.removeSync( './tmp' );
+    //fs.removeSync( './tmp' );
   } );
 
 } );
