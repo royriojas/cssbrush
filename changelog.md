@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.2.3
+- **Refactoring**
+  - change the default quotes to single - [305a0a6]( https://github.com/royriojas/cssbrush/commit/305a0a6 ), [royriojas](https://github.com/royriojas), 03/08/2015 11:26:25
+
+    
 ## v0.2.2
 - **Bug Fixes**
   - lock dependencies - [2f74599]( https://github.com/royriojas/cssbrush/commit/2f74599 ), [royriojas](https://github.com/royriojas), 03/08/2015 11:03:39
