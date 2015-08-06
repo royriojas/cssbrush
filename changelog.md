@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.4.0
+- **Build Scripts Changes**
+  - Add back esbeautifier as a dev dependency - [e4fc411]( https://github.com/royriojas/cssbrush/commit/e4fc411 ), [royriojas](https://github.com/royriojas), 05/08/2015 21:17:52
+
+    
 ## v0.3.0
 - **Build Scripts Changes**
   - Add cache-id to cssbrush to be able to run this task in parallel - [09e098d]( https://github.com/royriojas/cssbrush/commit/09e098d ), [royriojas](https://github.com/royriojas), 05/08/2015 18:12:52
