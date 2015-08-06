@@ -49,11 +49,11 @@ module.exports = {
         var msg = _args.count > 0 ? sFormat( '{0} file(s) beautified', _args.count ) : 'No files needed beautification!';
 
         cli.success( msg );
-        cli.ok( 'Esbeautifier done!' );
+        cli.ok( 'cssbrush done!' );
       } );
     } else {
 
-      var filesToBeautify = [];
+      var filesToBeautify = [ ];
 
       beautifier.on( 'need:beautify.cli', function ( e, _args ) {
         filesToBeautify.push( _args.file );
@@ -65,7 +65,7 @@ module.exports = {
           throw new Error( sFormat( '{0} files need beautification', filesToBeautify.length ) );
         } else {
           cli.success( 'All files are beautified.' );
-          cli.ok( 'Done!' );
+          cli.ok( 'cssbrush done!' );
         }
       } );
     }

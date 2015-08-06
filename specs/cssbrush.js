@@ -4,9 +4,7 @@ describe( 'csscomb', function () {
 
   var exec = require( '../lib/exec' );
   var read = function ( file ) {
-    return require( 'fs' ).readFileSync( file, {
-      encoding: 'utf8'
-    } );
+    return require( 'fs' ).readFileSync( file, { encoding: 'utf8' } );
   };
   //var write = require( 'write' ).sync;
 
@@ -21,9 +19,7 @@ describe( 'csscomb', function () {
     var basename = path.basename( file );
 
     it( 'should format the file ' + basename + ' and match the expected result', function ( done ) {
-      exec( './bin/cli.js --no-use-cache ' + file, {
-        stdio: 'ignore'
-      } ).then( function () {
+      exec( './bin/cli.js --no-use-cache ' + file, { stdio: 'ignore' } ).then( function () {
 
         var expected = read( path.join( 'tmp/expected/', basename ) );
         var result = read( file );

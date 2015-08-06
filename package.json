@@ -39,6 +39,7 @@
   "devDependencies": {
     "changelogx": "^1.0.16",
     "es6-promise": "^2.3.0",
+    "esbeautifier": "^4.2.0",
     "eslinter": "^2.1.0",
     "fs-extra": "^0.22.1",
     "istanbul": "^0.3.17",

@@ -50,7 +50,7 @@ var beautifier = merge( dispatcher.create(), {
     var useCache = !!opts.useCache;
     var checkOnly = !!opts.checkOnly;
 
-    files = files || [];
+    files = files || [ ];
 
     var cache = require( 'file-entry-cache' ).create( (checkOnly ? '__cssbrush.check__' : '__cssbrush__') + (opts.cacheId ? opts.cacheId : '') );
 
@@ -64,9 +64,7 @@ var beautifier = merge( dispatcher.create(), {
 
     var count = 0;
 
-    me.fire( 'beautify:start', {
-      files: files
-    } );
+    me.fire( 'beautify:start', { files: files } );
 
     if ( files.length === 0 ) {
       me.fire( 'done', {
@@ -78,9 +76,7 @@ var beautifier = merge( dispatcher.create(), {
     }
 
     files.forEach( function ( file ) {
-      var source = fs.readFileSync( file, {
-        encoding: 'utf8'
-      } );
+      var source = fs.readFileSync( file, { encoding: 'utf8' } );
       var syntax = file.split( '.' ).pop();
       var output;
       try {

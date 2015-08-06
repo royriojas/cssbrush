@@ -6,7 +6,7 @@ module.exports = {
     defaultName: '.csscomb.json',
     pathToLocalConfig: path.resolve( __dirname, '../configs/csscomb.json' ),
     description: 'Path to your `csscomb` config, if not provided will try to use the `.csscomb.json` file in your current working directory, if not found will use the one provided with this package.\n' +
-      'Build your own config here: http://csscomb.com/config'
+        'Build your own config here: http://csscomb.com/config'
   },
   //useDefaultOptions: true,
   optionator: {
