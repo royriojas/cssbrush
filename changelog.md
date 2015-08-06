@@ -1,5 +1,23 @@
 
 # cssbrush - Changelog
+## v0.3.0
+- **Build Scripts Changes**
+  - Add cache-id to cssbrush to be able to run this task in parallel - [09e098d]( https://github.com/royriojas/cssbrush/commit/09e098d ), [royriojas](https://github.com/royriojas), 05/08/2015 18:12:52
+
+    Doing
+    
+    ```bash
+    cssbrush --cache-id='some-id' '/path/to/files/**/*.less'
+    ```
+    
+    or
+    
+    ```bash
+    cssbrush -i 'some-id' '/path/to/files/**/*.less'
+    ```
+    
+    will generate a cache file like __cssbrush__some-id inside the flat-cache module
+    
 ## v0.2.3
 - **Refactoring**
   - change the default quotes to single - [305a0a6]( https://github.com/royriojas/cssbrush/commit/305a0a6 ), [royriojas](https://github.com/royriojas), 03/08/2015 11:26:25
