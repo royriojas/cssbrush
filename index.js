@@ -52,7 +52,7 @@ var beautifier = merge( dispatcher.create(), {
 
     files = files || [];
 
-    var cache = require( 'file-entry-cache' ).create( checkOnly ? '__cssbrush.check__' : '__cssbrush__' );
+    var cache = require( 'file-entry-cache' ).create( (checkOnly ? '__cssbrush.check__' : '__cssbrush__') + (opts.cacheId ? opts.cacheId : '') );
 
     if ( !useCache ) {
       cache.deleteCacheFile();

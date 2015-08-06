@@ -22,6 +22,12 @@ module.exports = {
         description: 'Will just run the beautifier and report which files need to be beautified'
       },
       {
+        option: 'cache-id',
+        alias: 'i',
+        type: 'String',
+        description: 'An identifier for the cache file to create. This is only needed if you want to run this task in parallel otherwise the next execution might get confusing results for reusing the same cache file.'
+      },
+      {
         option: 'use-cache',
         alias: 'u',
         type: 'Boolean',

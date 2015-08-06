@@ -29,7 +29,8 @@ module.exports = {
     var beautifier = require( '../index' ).create( {
       useCache: useCache,
       checkOnly: checkOnly,
-      cfg: cfg
+      cfg: cfg,
+      cacheId: opts.cacheId
     } );
 
     beautifier.on( 'beautify:start', function ( e, _args ) {

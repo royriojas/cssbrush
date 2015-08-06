@@ -45,16 +45,22 @@ Here is the output of the `--help` option
 Usage: cssbrush [options] glob [glob1] [glob2]..[globN]
 
 Options:
-  -k, --check-only     Will just run the beautifier and report which files need to be beautified
-  -u, --use-cache      If true, this module will remember the `mtime` and `size` of the beatufied files and only operate on the ones that changed. If false,
-                       the cache will be destroyed. Cache will be used unless `--no-use-cache` is specified  - default: true
-  -h, --help           Show this help
-  -v, --version        Outputs the version number
-  -q, --quiet          Show only the summary info - default: false
-  --colored-output     Use colored output in logs
-  -c, --config String  Path to your `csscomb` config, if not provided will try to use the `.csscomb.json` file in your current working directory, if not
-                       found will use the one provided with this package.
-                       Build your own config here: http://csscomb.com/config
+  -k, --check-only       Will just run the beautifier and report which files need to be beautified
+  -i, --cache-id String  An identifier for the cache file to create. This is only needed if you want to run this
+                         task in parallel otherwise the next execution might get confusing results for reusing the
+                         same cache file.
+  -u, --use-cache
+      If true, this module will remember the `mtime` and `size` of the beatufied files and only operate on the ones
+      that changed. If false, the cache will be destroyed. Cache will be used unless `--no-use-cache` is specified
+      - default: true
+  -h, --help             Show this help
+  -v, --version          Outputs the version number
+  -q, --quiet            Show only the summary info - default: false
+  --colored-output       Use colored output in logs
+  -c, --config String
+      Path to your `csscomb` config, if not provided will try to use the `.csscomb.json` file in your current
+      working directory, if not found will use the one provided with this package.
+      Build your own config here: http://csscomb.com/config
 ```
 
 ```bash
