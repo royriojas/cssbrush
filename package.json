@@ -1,6 +1,6 @@
 {
   "name": "cssbrush",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Alternative cli for csscomb with glob support and that only operates on changed files",
   "main": "index.js",
   "scripts": {
