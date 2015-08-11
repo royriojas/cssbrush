@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.4.3
+- **Build Scripts Changes**
+  - Update to latest clix - [aa4b574]( https://github.com/royriojas/cssbrush/commit/aa4b574 ), [royriojas](https://github.com/royriojas), 11/08/2015 14:39:35
+
+    
 ## v0.4.2
 - **Build Scripts Changes**
   - remove unused dep and added latest clix - [eb6393b]( https://github.com/royriojas/cssbrush/commit/eb6393b ), [royriojas](https://github.com/royriojas), 11/08/2015 13:58:59
