@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.4.1
+- **Build Scripts Changes**
+  - Update to latest clix-logger - [144bef3]( https://github.com/royriojas/cssbrush/commit/144bef3 ), [royriojas](https://github.com/royriojas), 11/08/2015 13:53:40
+
+    
 ## v0.4.0
 - **Build Scripts Changes**
   - Add back esbeautifier as a dev dependency - [e4fc411]( https://github.com/royriojas/cssbrush/commit/e4fc411 ), [royriojas](https://github.com/royriojas), 05/08/2015 21:17:52
