@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.4.4
+- **Build Scripts Changes**
+  - update clix dep to get nicer log output - [fa95bec]( https://github.com/royriojas/cssbrush/commit/fa95bec ), [royriojas](https://github.com/royriojas), 11/08/2015 17:31:17
+
+    
 ## v0.4.3
 - **Build Scripts Changes**
   - Update to latest clix - [aa4b574]( https://github.com/royriojas/cssbrush/commit/aa4b574 ), [royriojas](https://github.com/royriojas), 11/08/2015 14:39:35
