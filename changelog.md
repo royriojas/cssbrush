@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.4.6
+- **Bug Fixes**
+  - Make sure the right clix module is loaded - [de1ccf0]( https://github.com/royriojas/cssbrush/commit/de1ccf0 ), [royriojas](https://github.com/royriojas), 17/08/2015 15:13:04
+
+    
 ## v0.4.5
 - **Bug Fixes**
   - properly expand globs that contains globs with exclude patterns - [1f4a93e]( https://github.com/royriojas/cssbrush/commit/1f4a93e ), [royriojas](https://github.com/royriojas), 16/08/2015 20:18:13
