@@ -1,6 +1,6 @@
 {
   "name": "cssbrush",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "dependencies": {
     "clix": {
       "version": "2.0.13",
