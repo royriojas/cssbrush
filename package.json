@@ -48,15 +48,15 @@
     "prepush": "^3.1.3",
     "proxyquire": "^1.6.0",
     "spawnly": "^0.1.0",
-    "watch-spawn": "^1.0.4"
+    "watch-spawn": "^1.0.4",
+    "glob-expand": "^0.1.0"
   },
   "dependencies": {
-    "clix": "^2.0.3",
+    "clix": "^2.0.12",
     "csscomb": "^3.1.8",
     "dispatchy": "^1.0.3",
     "extend": "^3.0.0",
     "file-entry-cache": "^1.0.1",
-    "glob-expand": "^0.1.0",
     "gonzales-pe": "^3.0.0-29",
     "stringformat": "0.0.5",
     "write": "^0.2.1"
