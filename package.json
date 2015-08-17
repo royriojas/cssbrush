@@ -52,7 +52,7 @@
     "glob-expand": "^0.1.0"
   },
   "dependencies": {
-    "clix": "^2.0.12",
+    "clix": "^2.0.13",
     "csscomb": "^3.1.8",
     "dispatchy": "^1.0.3",
     "extend": "^3.0.0",
