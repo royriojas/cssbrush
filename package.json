@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "clix": "^2.0.13",
-    "csscomb": "^3.1.8",
+    "csscomb": "https://github.com/royriojas/csscomb.js/tarball/master",
     "dispatchy": "^1.0.3",
     "extend": "^3.0.0",
     "file-entry-cache": "^1.0.1",
