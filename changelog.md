@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.4.8
+- **Build Scripts Changes**
+  - Do not depend on shrink-wrap - [3a97b01]( https://github.com/royriojas/cssbrush/commit/3a97b01 ), [royriojas](https://github.com/royriojas), 31/08/2015 11:56:53
+
+    
 ## v0.4.7
 - **Bug Fixes**
   - missing `glob-expand` error - [8e1abbc]( https://github.com/royriojas/cssbrush/commit/8e1abbc ), [royriojas](https://github.com/royriojas), 18/08/2015 01:12:28
