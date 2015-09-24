@@ -1,6 +1,8 @@
 var dispatcher = require( 'dispatchy' );
 var merge = require( 'extend' );
 var fs = require( 'fs' );
+var hash = require( 'hash-string' );
+var fileEntryCache = require( 'file-entry-cache' );
 
 var beautifier = merge( dispatcher.create(), {
   _init: function ( opts ) {
@@ -26,6 +28,25 @@ var beautifier = merge( dispatcher.create(), {
 
     me.comb.configure( opts.cfg );
   },
+
+  _checkHashOfConfig: function ( fEntryCache, opts ) {
+    var me = this;
+    var configHashPersisted = fEntryCache.cache.getKey( 'configHash' );
+
+    var hashOfConfig = hash( JSON.stringify( opts ) );
+    var ignoreCache = configHashPersisted !== hashOfConfig;
+
+    if ( ignoreCache ) {
+      fEntryCache.destroy();
+      fEntryCache.cache.setKey( 'configHash', hashOfConfig );
+
+      me.fire( 'ignore:cache', {
+        previousHash: configHashPersisted,
+        currentHash: hashOfConfig
+      } );
+    }
+  },
+
   format: function ( source, options ) {
     var me = this;
     // add a new line before each declaration
@@ -52,13 +73,17 @@ var beautifier = merge( dispatcher.create(), {
 
     files = files || [ ];
 
-    var cache = require( 'file-entry-cache' ).create( (checkOnly ? '__cssbrush.check__' : '__cssbrush__') + (opts.cacheId ? opts.cacheId : '') );
+    var cacheId = opts.cacheId ? opts.cacheId : hash( process.cwd() );
+
+    var cache = fileEntryCache.create( (checkOnly ? '__cssbrush.check__' : '__cssbrush__') + cacheId );
 
     if ( !useCache ) {
       cache.deleteCacheFile();
     } else {
-      files = cache.getUpdatedFiles( files );
+      me._checkHashOfConfig( cache, opts );
     }
+
+    files = cache.getUpdatedFiles( files );
 
     var write = require( 'write' ).sync;
 

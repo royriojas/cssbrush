@@ -30,6 +30,13 @@ module.exports = {
       cacheId: opts.cacheId
     } );
 
+    beautifier.on( 'ignore:cache', function ( e, _args ) {
+      if ( typeof _args.previousHash === 'undefined' ) {
+        return;
+      }
+      cli.subtle( 'ignoring cache because config parameters changed', _args );
+    } );
+
     beautifier.on( 'beautify:start', function ( e, _args ) {
       cli.subtle( 'Total files: ' + files.length + ', files to process: ' + _args.files.length );
       if ( _args.files.length === 0 ) {

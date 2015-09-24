@@ -56,8 +56,9 @@
     "csscomb": "https://github.com/royriojas/csscomb.js/tarball/master",
     "dispatchy": "^1.0.3",
     "extend": "^3.0.0",
-    "file-entry-cache": "^1.0.1",
+    "file-entry-cache": "^1.2.4",
     "gonzales-pe": "^3.0.0-29",
+    "hash-string": "^1.0.0",
     "stringformat": "0.0.5",
     "write": "^0.2.1"
   },
