@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.5.0
+- **Bug Fixes**
+  - Make sure mixins and variables are always on top - [c8cb657]( https://github.com/royriojas/cssbrush/commit/c8cb657 ), [royriojas](https://github.com/royriojas), 08/10/2015 19:10:31
+
+    
 ## v0.4.9
 - **Enhancements**
   - destroy the cache when the configuration options change - [e5c26f9]( https://github.com/royriojas/cssbrush/commit/e5c26f9 ), [royriojas](https://github.com/royriojas), 23/09/2015 22:56:23
