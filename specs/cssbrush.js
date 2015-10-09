@@ -13,7 +13,7 @@ describe( 'csscomb', function () {
   fs.removeSync( './tmp' );
   fs.copySync( './resources', './tmp' );
 
-  var files = expand( 'tmp/fixtures/**/*.less' );
+  var files = expand( 'tmp/fixtures/**/*.{less,scss}' );
   files.forEach( function ( file ) {
 
     var basename = path.basename( file );

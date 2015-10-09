@@ -29,6 +29,8 @@
   "space-before-selector": "\n",
   "max-empty-lines": "\n\n",
   "sort-order": [
+    [ "$variable" ],
+    [ "$include" ],
     [
       "font",
       "font-family",
