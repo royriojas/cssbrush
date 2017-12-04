@@ -19,7 +19,9 @@
     "post-v": "npm run do-changelog && git push --no-verify && git push --tags --no-verify",
     "bump-major": "npm run pre-v && npm version major -m 'BLD: Release v%s' && npm run post-v",
     "bump-minor": "npm run pre-v && npm version minor -m 'BLD: Release v%s' && npm run post-v",
-    "bump-patch": "npm run pre-v && npm version patch -m 'BLD: Release v%s' && npm run post-v"
+    "bump-patch": "npm run pre-v && npm version patch -m 'BLD: Release v%s' && npm run post-v",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "cssbrush": "./bin/cli.js"
@@ -60,7 +62,8 @@
     "gonzales-pe": "^3.0.0-29",
     "hash-string": "^1.0.0",
     "stringformat": "0.0.5",
-    "write": "^0.2.1"
+    "write": "^0.2.1",
+    "snyk": "^1.53.0"
   },
   "bugs": {
     "url": "https://github.com/royriojas/cssbrush/issues"
@@ -75,5 +78,6 @@
     "css beautifier",
     "less beautifier",
     "prettify"
-  ]
+  ],
+  "snyk": true
 }
