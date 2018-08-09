@@ -39,31 +39,31 @@
     "npm run check"
   ],
   "devDependencies": {
-    "changelogx": "^1.0.17",
+    "changelogx": "2.0.1",
     "es6-promise": "^2.3.0",
     "esbeautifier": "^4.2.5",
     "eslinter": "^2.3.0",
     "fs-extra": "^0.22.1",
+    "glob-expand": "^0.1.0",
     "istanbul": "^0.3.17",
     "mocha-runner": "^1.0.8",
     "precommit": "^1.1.4",
     "prepush": "^3.1.3",
     "proxyquire": "^1.6.0",
     "spawnly": "^0.1.0",
-    "watch-spawn": "^1.0.4",
-    "glob-expand": "^0.1.0"
+    "watch-spawn": "^1.0.4"
   },
   "dependencies": {
-    "clix": "^2.0.13",
+    "clix": "2.2.2",
     "csscomb": "https://github.com/royriojas/csscomb.js/tarball/master",
     "dispatchy": "^1.0.3",
     "extend": "^3.0.0",
     "file-entry-cache": "^1.2.4",
     "gonzales-pe": "^3.0.0-29",
     "hash-string": "^1.0.0",
+    "snyk": "^1.53.0",
     "stringformat": "0.0.5",
-    "write": "^0.2.1",
-    "snyk": "^1.53.0"
+    "write": "^0.2.1"
   },
   "bugs": {
     "url": "https://github.com/royriojas/cssbrush/issues"
