@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.6.3
+- **Refactoring**
+  - Upgrade travis.yml - [cd7d80c]( https://github.com/royriojas/cssbrush/commit/cd7d80c ), [Roy Riojas](https://github.com/Roy Riojas), 09/08/2018 05:25:11
+
+    
 ## v0.6.1
 - **Refactoring**
   - upgrade moment vulnerable version - [cccb358]( https://github.com/royriojas/cssbrush/commit/cccb358 ), [Roy Riojas](https://github.com/Roy Riojas), 09/08/2018 02:12:17
