@@ -1,5 +1,10 @@
 
 # cssbrush - Changelog
+## v0.6.1
+- **Refactoring**
+  - upgrade moment vulnerable version - [cccb358]( https://github.com/royriojas/cssbrush/commit/cccb358 ), [Roy Riojas](https://github.com/Roy Riojas), 09/08/2018 02:12:17
+
+    
 ## v0.6.0
 - **undefined**
   - package.json & .snyk to reduce vulnerabilities - [3f25637]( https://github.com/royriojas/cssbrush/commit/3f25637 ), [snyk-bot](https://github.com/snyk-bot), 04/12/2017 18:06:09
