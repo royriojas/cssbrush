@@ -1,5 +1,14 @@
 
 # cssbrush - Changelog
+## v0.6.0
+- **undefined**
+  - package.json & .snyk to reduce vulnerabilities - [3f25637]( https://github.com/royriojas/cssbrush/commit/3f25637 ), [snyk-bot](https://github.com/snyk-bot), 04/12/2017 18:06:09
+
+    The following vulnerabilities are fixed with a Snyk patch:
+    - https://snyk.io/vuln/npm:moment:20170905
+    
+    Latest report for royriojas/cssbrush:
+    https://snyk.io/test/github/royriojas/cssbrush
 ## v0.5.0
 - **Bug Fixes**
   - Make sure mixins and variables are always on top - [c8cb657]( https://github.com/royriojas/cssbrush/commit/c8cb657 ), [royriojas](https://github.com/royriojas), 08/10/2015 19:10:31
