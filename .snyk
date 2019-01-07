@@ -1,8 +1,13 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.8.0
+version: v1.13.3
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:moment:20170905':
     - clix > clix-logger > moment:
         patched: '2017-12-04T23:06:07.834Z'
+  'npm:extend:20180424':
+    - clix > extend:
+        patched: '2019-01-07T08:47:26.683Z'
+    - clix > clix-logger > extend:
+        patched: '2019-01-07T08:47:26.683Z'
